@@ -1,0 +1,27 @@
+<table [formGroup]="loginForm">
+  <tr>
+    <td>
+      <label>User Name</label>
+    </td>
+    <td>
+      <label><input type="text" formControlName="userName"/></label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>Password</label>
+    </td>
+    <td>
+      <label><input type="password" formControlName="password"/></label>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <button ngbButton (click)="onLogin()">Login</button>
+    </td>
+    <td>
+      <button>Reset</button>
+    </td>
+  </tr>
+</table>

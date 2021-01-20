@@ -1,0 +1,32 @@
+<table [formGroup]="employeeForm">
+  <tr>
+    <td>Name: </td>
+    <td><input formControlName="name"/> </td>
+  </tr>
+
+  <tr>
+    <td>Salary: </td>
+    <td><input formControlName="salary"/> </td>
+  </tr>
+
+  <tr>
+    <td>Address: </td>
+    <td><input type="textarea" formControlName="address"/> </td>
+  </tr>
+
+  <tr>
+    <td>Permanent Address: </td>
+    <td><input type="radio" value="yes" formControlName="isPermanent" (click)="onClickNo(false)"> Yes</td>
+    <td><input type="radio" value="no" formControlName="isPermanent" (click)="onClickNo(true)"> No </td>
+  </tr>
+
+  <tr *ngIf="showAddress2">
+    <td>Address 2: </td>
+    <td><input type="textarea" formControlName="address2"/> </td>
+  </tr>
+
+  <tr>
+    <td><button (click)="onSubmit()" [disabled]="this.employeeForm.invalid">Submit</button></td>
+    <td><button>Reset</button></td>
+  </tr>
+</table>
